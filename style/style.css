@@ -18,25 +18,25 @@
     --font-family: 'Space Grotesk';
 }
 
-body {
+
+main {
     position: relative;
     background-image: url("../images/bg-main-mobile.png");
     background-repeat: no-repeat;
     display: grid;
     grid-template-columns: minmax(100px,375px);
-    padding: 0 20px;
     background-color: var(--white);
-    overflow: hidden;
+    padding: 0 20px;
 }
 
-body .card-back{
+main .card-back{
     position: absolute;
     width: 280px;
     height: 153px;
     transform: translate(65px, 40px);
     background-image: url("../images/bg-card-back-mobile.png");
 }
-body .card-back .cvc{
+main .card-back .cvc{
     font-size: 0.8rem;
     font-family: var(--font-family);
     color: var(--white);
@@ -44,7 +44,7 @@ body .card-back .cvc{
     width: 20px;
 }
 
-body .card-front{
+main .card-front{
     position: absolute;
     width: 280px;
     height: 153px;
@@ -57,7 +57,7 @@ body .card-front{
     filter: drop-shadow(0 15px 50px rgba(0,0,0,0.3));
 }
 
-body .card-front .logo-icon{
+main .card-front .logo-icon{
     display: flex;
     width: 55px;
     height: 30px;
@@ -65,19 +65,19 @@ body .card-front .logo-icon{
     justify-content: space-between;
 }
 
-body .card-front .logo-icon .circle-1{
+main .card-front .logo-icon .circle-1{
     height: 30px;
     width: 30px;
     background-color: var(--white);
     border-radius: 50%;
 }
-body .card-front .logo-icon .circle-2{
+main .card-front .logo-icon .circle-2{
     height: 14px;
     width: 14px;
     border: 1px solid var(--white);
     border-radius: 50%;
 }
-body .card-front .number-card{
+main .card-front .number-card{
     
     width: 100%;
     height: 30px;
@@ -88,7 +88,7 @@ body .card-front .number-card{
     font-size: 1.1rem;
 }
 
-body .card-front .card-detail{
+main .card-front .card-detail{
     width: 100%;
     height: 30px;
     display: flex;
@@ -99,18 +99,16 @@ body .card-front .card-detail{
     text-transform: uppercase;
 }
 
-body .container-form{
+main .container-form{
     position: relative;
     top: 280px;
     width: 100%;
     height: 600px;
-    /* background-color: var(--light-grayish-violet); */
-    z-index: -1;
 }
-body .container-form form{
+main .container-form form{
     padding-top: 25px;
 }
-body .container-form form .card-data{
+main .container-form form .card-data{
     top: 50px;
     display: flex;
     flex-direction: column;
@@ -130,31 +128,33 @@ input{
     padding: 10px 15px;
     margin-bottom: 20px;
     font-size: 1.1rem;
+    appearance: none;
+    
 }
 
 input::placeholder{
     color: var(--light-grayish-violet);
 }
 
-body .container-form form .input-date{
+main .container-form form .input-date{
     display: flex;
     gap: 10px;
 }
-body .container-form form .input-date .input-month .current-input{
+main .container-form form .input-date .input-month .current-input{
     display: flex;
     gap: 10px;
 }
-body .container-form form .input-date .input-month .current-input input{
+main .container-form form .input-date .input-month .current-input input{
     width: 70px;
 }
-body .container-form form .input-cvc{
+main .container-form form .input-cvc{
     display: flex;
     flex-direction: column;
 }
-body .container-form form .input-cvc input{
+main .container-form form .input-cvc input{
     width: 100%;
 }
-body .container-form #button{
+#button{
     border: none;
     width: 100%;
     padding: 18px;
@@ -168,16 +168,17 @@ body .container-form #button{
 
 @media (min-width: 376px)
 {
-    body {
+    main {
         position: relative;
         background-image: url("../images/bg-main-desktop.png");
         background-repeat: no-repeat;
         display: grid;
-        grid-template-columns: minmax(800px,1440px);
+        
+        grid-template-columns: minmax(375px,1440px);
         background-color: var(--white);
     }
 
-    body .card-back{
+    main .card-back{
         position: absolute;
         width: 447px;
         height: 245px;
@@ -186,14 +187,14 @@ body .container-form #button{
         transform: translate(250px, 500px);
         filter: drop-shadow(0 15px 50px rgba(0,0,0,0.3));
     }
-    body .card-back .cvc{
+    main .card-back .cvc{
         font-size: var(--body-font-size);
         font-family: var(--font-family);
         color: var(--white);
         transform: translate(365px, 110px);
         width: 20px;
     }
-    body .card-front{
+    main .card-front{
         position: absolute;
         width: 447px;
         height: 245px;
@@ -204,5 +205,10 @@ body .container-form #button{
         font-family: var(--font-family);
         padding: 20px;
         filter: drop-shadow(0 15px 50px rgba(0,0,0,0.3));
+    }
+    main .container-form{
+        position: relative;
+        transform: translate(400px, -50px);
+        width: 500px;
     }
 }
