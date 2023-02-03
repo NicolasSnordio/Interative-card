@@ -20,6 +20,7 @@
 
 body {
     position: relative;
+    background-image: url("../images/bg-main-mobile.png");
     background-repeat: no-repeat;
     display: grid;
     grid-template-columns: minmax(100px,375px);
@@ -47,28 +48,23 @@ body .card-front{
     position: absolute;
     width: 280px;
     height: 153px;
-    transform: translate(65px, 40px);
-    background-image: url("../images/bg-card-back-mobile.png");
-}
-body .card-back .cvc{
-    font-size: 0.8rem;
-    font-family: var(--font-family);
+    top: 125px;
+    left: 20px;
+    background-image: url("../images/bg-card-front-mobile.png");
     color: var(--white);
-    transform: translate(220px, 66px);
-    width: 20px;
+    font-family: var(--font-family);
+    padding: 20px;
+    filter: drop-shadow(0 15px 50px rgba(0,0,0,0.3));
 }
 
-.back-card  {
-    position: absolute;
-    top: 35px;
-    margin-left: 55px;
+body .card-front .logo-icon{
+    display: flex;
+    width: 55px;
+    height: 30px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.front-card > img{
-    position: relative;
-    top: 128px;
-    margin-left: 10px;
-}
 body .card-front .logo-icon .circle-1{
     height: 30px;
     width: 30px;
