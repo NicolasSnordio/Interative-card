@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--font-family);
 }
 
 :root {
@@ -22,14 +23,39 @@ body {
     background-repeat: no-repeat;
     display: grid;
     grid-template-columns: minmax(100px,375px);
+    padding: 0 20px;
+    background-color: var(--white);
+    overflow: hidden;
 }
 
-body .background-mobile{
-    background-image: url(../images/bg-main-mobile.png);
-    background-repeat: no-repeat;
-    width: 375px;
-    height: 100vh;
+body .card-back{
     position: absolute;
+    width: 280px;
+    height: 153px;
+    transform: translate(65px, 40px);
+    background-image: url("../images/bg-card-back-mobile.png");
+}
+body .card-back .cvc{
+    font-size: 0.8rem;
+    font-family: var(--font-family);
+    color: var(--white);
+    transform: translate(220px, 66px);
+    width: 20px;
+}
+
+body .card-front{
+    position: absolute;
+    width: 280px;
+    height: 153px;
+    transform: translate(65px, 40px);
+    background-image: url("../images/bg-card-back-mobile.png");
+}
+body .card-back .cvc{
+    font-size: 0.8rem;
+    font-family: var(--font-family);
+    color: var(--white);
+    transform: translate(220px, 66px);
+    width: 20px;
 }
 
 .back-card  {
@@ -42,4 +68,103 @@ body .background-mobile{
     position: relative;
     top: 128px;
     margin-left: 10px;
+}
+body .card-front .logo-icon .circle-1{
+    height: 30px;
+    width: 30px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+body .card-front .logo-icon .circle-2{
+    height: 14px;
+    width: 14px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+body .card-front .number-card{
+    
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    font-size: 1.1rem;
+}
+
+body .card-front .card-detail{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+body .container-form{
+    position: relative;
+    top: 280px;
+    width: 100%;
+    height: 600px;
+    /* background-color: var(--light-grayish-violet); */
+    z-index: -1;
+}
+body .container-form form{
+    padding-top: 25px;
+}
+body .container-form form .card-data{
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+.label{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    line-height: 35px;
+    color: var(--very-dark-violet);
+    font-weight: 500;
+}
+input{
+    border: 1px solid var(--light-grayish-violet);
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+input::placeholder{
+    color: var(--light-grayish-violet);
+}
+
+body .container-form form .input-date{
+    display: flex;
+    gap: 10px;
+}
+body .container-form form .input-date .input-month .current-input{
+    display: flex;
+    gap: 10px;
+}
+body .container-form form .input-date .input-month .current-input input{
+    width: 70px;
+}
+body .container-form form .input-cvc{
+    display: flex;
+    flex-direction: column;
+}
+body .container-form form .input-cvc input{
+    width: 100%;
+}
+body .container-form #button{
+    border: none;
+    width: 100%;
+    padding: 18px;
+    background-color: var(--very-dark-violet);
+    border-radius: 8px;
+    margin-top: 10px;
+    color: var(--white);
+    font-size: var(--body-font-size);
 }
