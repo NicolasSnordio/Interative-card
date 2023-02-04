@@ -8,7 +8,7 @@
 }
 
 :root {
-    --linear-gradient: linear-gradient(to hsl(249, 99%, 64%),hsl(278, 94%, 30%));
+    --linear-gradient: linear-gradient(hsl(220deg, 80%, 80%), hsl(250deg, 80%, 80%));
     --red: hsl(0, 100%, 66%);
     --white: hsl(0, 0%, 100%);
     --light-grayish-violet: hsl(270, 3%, 87%);
@@ -142,6 +142,14 @@ input{
 }
 input::placeholder{
     color: var(--light-grayish-violet);
+}
+input::-webkit-inner-spin-button{
+    appearance: none;
+}
+
+input:focus-visible{
+    border: none;
+    outline: 1px solid var(--red);
 }
 main .container-form form {
     overflow: hidden;
