@@ -10,57 +10,60 @@
   <title>Interactive card </title>
 </head>
 
-<body>
-  <main>
-    <div class="card-container">
-      <div class="card-back">
-        <div class="cvc">000</div>
+  <body>
+    <main>
+      <div class="card-container">
+        <div class="card-back">
+          <div class="cvc">000</div>
+        </div>
+        <div class="card-front">
+          <div class="logo-icon">
+            <span class="circle-1"></span><span class="circle-2"></span>
+          </div>
+          <div class="number-card">
+            0000 0000 0000 0000
+          </div>
+          <div class="card-detail">
+            <span class="name">Jane appleseed</span> <span class="date">00/00</span>
+          </div>
+        </div>
       </div>
-      <div class="card-front">
-        <div class="logo-icon">
-          <span class="circle-1"></span><span class="circle-2"></span>
-        </div>
-        <div class="number-card">
-          0000 0000 0000 0000
-        </div>
-        <div class="card-detail">
-          <span class="name">Jane appleseed</span> <span class="date">00/00</span>
-        </div>
-      </div>
-    </div>
-
-
-    <section class="container-form">
-      <form action="#" method="post">
-        <div class="card-data">
-          <label class="label" for="name">cardholder name</label>
-          <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed">
-
-          <label class="label" for="number">card number</label>
-          <input type="number" name="number" id="number" placeholder="e.g. 1234 5678 9123 0000">
-
-        </div>
-
-        <div class="input-date">
-          <div class="input-month">
-            <label class="label" for="">exp. date (mm/yy)</label>
-            <div class="current-input">
+      
+    
+      <section class="container-form">
+        <form action="#" method="post">
+          <div class="card-data">
+            <label class="label" for="name">cardholder name</label>
+            <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed">
+    
+            <label class="label" for="number">card number</label>
+            <input type="number" name="number" id="number" placeholder="e.g. 1234 5678 9123 0000">
+    
+          </div>
+    
+          <div class="input-date">
+            <div class="exp">
+              <label class="label" for="">exp. date</label>
               <input type="number" name="mm" id="mm" placeholder="MM">
+            </div>
+
+            <div class="year">
+              <label class="label" for="">(mm/yy)</label>
               <input type="number" name="yy" id="yy" placeholder="YY">
             </div>
+
+            <div class="cvc">
+              <label class="label" for="">cvc</label>
+              <input type="number" name="cvc" id="cvc" placeholder="e.g. 123">
+            </div>
+            
           </div>
-
-          <div class="input-cvc">
-            <label class="label" for="cvc">cvc</label>
-            <input type="number" name="cvc" id="cvc" placeholder="e.g. 123">
-          </div>
-
-        </div>
-        <button id="button" type="submit">Confirm</button>
-      </form>
-
-    </section>
-  </main>
-</body>
+          <button id="button" type="submit">Confirm</button>
+        </form>
+    
+      </section>
+      
+    </main>
+  </body>
 
 </html>
