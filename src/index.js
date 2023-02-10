@@ -22,8 +22,7 @@ nameInput.addEventListener('input',printName)
 const cardNumberInput = document.querySelector('#number')
 const numberCardSpan = document.querySelector('.number-card')
 
-// const namePattern = /([A-z])+?/g
-// nameSpan.textContent = String(nameInput.value.match(namePattern)).trim(' , ') 
+
 
 const numberCardPattern = /^(\d{4})(\d{4})(\d{4})(\d{4})/
 const numberCardFormated = "$1 $2 $3 $4"
@@ -34,13 +33,6 @@ function printCardNumber(){
     numberCardSpan.textContent = cardNumberInputValue.replace(numberCardPattern, numberCardFormated)
 
     cardNumberInputValue === "" ? numberCardSpan.textContent = "0000 0000 0000 0000" : cardNumberInputValue
-
-    if(cardNumberInputValue.length >= 16){
-        
-        cardNumberInput.addEventListener('keypress',(e)=>{
-            e.preventDefault()
-        })
-    }
    
 }
 cardNumberInput.addEventListener('input', printCardNumber)
@@ -85,18 +77,68 @@ const sucessDiv = document.querySelector('.sucess')
 const continueBtn = document.querySelector('#continue')
 
 
+const errorP = document.querySelectorAll('p')
 
-button.addEventListener('click',()=>{
-    form.classList.add('none')
 
-    sucessDiv.classList.add('block')
+
+form.addEventListener('submit',(e)=>{
+   e.preventDefault()
+
+
+
+   
+    const isNameValid = nameInput =>{
+        const re = /[A-z]+?/g
+        return re.test(String(nameInput))
+    }   
+    
+
+    if(nameInput.value === ''){
+
+        const errorNameP = document.querySelector('#error-name')
+        errorNameP.classList.add('error')
+        nameInput.classList.add('shake')
+        
+
+    }else if(!isNameValid(nameInput.value)){
+        const errorNameP = document.querySelector('#error-name')
+        errorNameP.classList.add('error')
+        errorNameP.textContent = "Wrong, name is invalid!"
+        nameInput.classList.add('shake')
+    }
+    
+   
+    if(cardNumberInput.value === ""){
+
+        const errorNameP = document.querySelector('#error-number')
+        errorNameP.classList.add('error')
+        errorNameP.textContent = "Can't be blank"
+        cardNumberInput.classList.add('shake')
+        
+
+        
+
+    }else if(!Number(cardNumberInput.value)){
+        const errorNameP = document.querySelector('#error-number')
+        errorNameP.classList.add('error')
+        cardNumberInput.classList.add('shake')
+    }
+
 
 })
 
 
-continueBtn.addEventListener('click',()=>{
-    form.classList.remove('none')
+// button.addEventListener('click',()=>{
+//     form.classList.add('none')
 
-    sucessDiv.classList.remove('block')
+//     sucessDiv.classList.add('block')
 
-})
+// })
+
+
+// continueBtn.addEventListener('click',()=>{
+//     form.classList.remove('none')
+
+//     sucessDiv.classList.remove('block')
+
+// })
