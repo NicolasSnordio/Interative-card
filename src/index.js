@@ -44,6 +44,7 @@ const mmSpan = document.querySelector('#mm-span')
 
 function printMm(){
     mmSpan.textContent = mmInput.value
+    mmInput.value === "" ? mmSpan.textContent = '00' : mmInput.value
 }
 mmInput.addEventListener('input', printMm)
 
@@ -53,7 +54,7 @@ const yySpan = document.querySelector('#yy-span')
 
 function printYy(){
     yySpan.textContent = yyInput.value
-
+    yyInput.value === "" ? yySpan.textContent = '00' : yyInput.value
    
 }
 yyInput.addEventListener('input', printYy)
@@ -65,6 +66,7 @@ const cvcSpan = document.querySelector('.cvc')
 function printCvc(){
 
     cvcSpan.textContent = cvcInput.value
+    cvcInput.value === "" ? cvcSpan.textContent = '000' : cvcInput.value
 }
 cvcInput.addEventListener('input', printCvc)
 
