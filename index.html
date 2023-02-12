@@ -46,18 +46,19 @@
             <div class="exp">
               <label class="label" for="">exp. date</label>
               <input type="text" name="mm" id="mm" placeholder="MM" maxlength="2">
-              <p>Can't be blank</p>
+              <p id="error-mm" class="shake">Can't be blank</p>
             </div>
 
             <div class="year">
               <label class="label" for="">(mm/yy)</label>
               <input type="text" name="yy" id="yy" placeholder="YY" maxlength="2">
+              <p id="error-yy"></p>
             </div>
 
             <div class="cvc">
               <label class="label" for="">cvc</label>
               <input type="text" name="cvc" id="cvc" placeholder="e.g. 123" maxlength="3">
-              <p>Can't be blank</p>
+              <p id="error-cvc">Can't be blank</p>
             </div>
             
           </div>
@@ -74,6 +75,7 @@
       
     </main>
     <script src="./src/index.js"></script>
+
   </body>
 
 </html>
