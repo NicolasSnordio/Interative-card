@@ -174,13 +174,16 @@ input::placeholder{
 input::-webkit-inner-spin-button{
     appearance: none;
 }
-
-input:focus-visible{
+input:focus{
+    outline: none;
+    border: 1px solid var(--very-dark-violet);
+}
+/* input:focus-visible{
     outline: none;
     border: 1px solid;
     border-image-source: linear-gradient(180deg, #5a3ff4 0%, #6d16a0 100%);
     border-image-slice: 1;
-}
+} */
 
 main .container-form form .input-date{
     display: grid;
