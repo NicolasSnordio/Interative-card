@@ -21,6 +21,7 @@
 body{
     background-image: url("../images/bg-main-mobile.png");
     background-repeat: no-repeat;
+    background-size: contain;
     height: 100vh;
     font-family: var(--font-family);
 
@@ -29,7 +30,7 @@ body{
 
 main{
     display: grid;
-    grid-template-columns: minmax(200px, 375px);
+    grid-template-columns: minmax(200px, 418px);
     grid-template-rows: 320px 1fr;
     /* color: var(--white); */
 }
@@ -96,7 +97,7 @@ main .card-container .card-front .number-card{
     align-items: center;
     letter-spacing: 2px;
     margin-top: 25px;
-    font-size: 1.1rem;
+    font-size: 1.13rem;
 }
 
 main .card-container .card-front .card-detail{
@@ -276,7 +277,7 @@ main .container-form form .input-date .cvc input{
     padding: 0 20px;
 }
 
-@media (min-width: 376px){
+@media (min-width: 418px){
 
     body{
         background-image: url("../images/bg-main-desktop.png");
